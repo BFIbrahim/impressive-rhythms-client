@@ -1,42 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaCartArrowDown} from 'react-icons/fa';
+import { FaCartArrowDown, FaSearch } from 'react-icons/fa';
 
 const Navigation = () => {
     return (
-        <div className='bg-gray-200'>
-            <div className="navbar md:max-w-[90%] mx-auto">
-                <div className="navbar-start">
-                    <div className="dropdown">
-                        <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                        </label>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Item 1</a></li>
-                            <li>
-                                <a>Parent</a>
-                                <ul className="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
-                            </li>
-                            <li><a>Item 3</a></li>
-                        </ul>
-                    </div>
-                    <a className="btn btn-ghost normal-case text-xl font-bold"><img className='w-12' src="https://i.ibb.co/p47SjwV/20230723-081354.png" alt="" /> IR Fashion</a>
-                </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 gap-8 font-bold text-gray-900">
-                        <Link><li>Home</li></Link>
-                        <Link><li>About</li></Link>
-                        <Link><li>Shop</li></Link>
-                        <Link><li>Add Product</li></Link>
-                        
-                    </ul>
-                </div>
-                <div className="navbar-end">
-                    <a className=""><FaCartArrowDown className='text-2xl'></FaCartArrowDown></a>
-                </div>
+        <div className='flex items-center justify-around'>
+            <div>
+                <Link className='flex items-center'><img className='w-14' src="https://i.ibb.co/p47SjwV/20230723-081354.png" alt="" />
+                    <p className='text-2xl font-bold'><span className='text-orange-300'>IR</span> Fashion</p>
+                </Link>
+
+            </div>
+
+            <div className='flex'>
+                <input type="text" placeholder="Search" className="input  w-full max-w-xs shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-e-none w-96" />
+                <button className='btn bg-orange-300 rounded-s-none shadow-[0_3px_10px_rgb(0,0,0,0.2)]'><FaSearch></FaSearch></button>
+            </div>
+
+            <div className='flex items-center gap-5'>
+                <FaCartArrowDown className='text-2xl'></FaCartArrowDown>
+                <button className='btn bg-slate-200 hover:bg-orange-300'>Login</button>
+                <button className='btn bg-orange-300 hover:bg-slate-200'>Sign up</button>
             </div>
         </div>
     );
