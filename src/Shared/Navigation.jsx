@@ -4,7 +4,7 @@ import { FaCartArrowDown, FaSearch } from 'react-icons/fa';
 
 const Navigation = () => {
     return (
-        <div className='flex items-center justify-around'>
+        <div className='flex items-center justify-between mb-8 px-4'>
             <div>
                 <Link className='flex items-center'><img className='w-14' src="https://i.ibb.co/p47SjwV/20230723-081354.png" alt="" />
                     <p className='text-2xl font-bold'><span className='text-orange-300'>IR</span> Fashion</p>
@@ -13,7 +13,7 @@ const Navigation = () => {
             </div>
 
             <div className='flex'>
-                <input type="text" placeholder="Search" className="input  w-full max-w-xs shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-e-none w-96" />
+                <input type="text" placeholder="Search" className="input max-w-xs shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-e-none w-96" />
                 <button className='btn bg-orange-300 rounded-s-none shadow-[0_3px_10px_rgb(0,0,0,0.2)]'><FaSearch></FaSearch></button>
             </div>
 
